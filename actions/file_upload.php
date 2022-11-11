@@ -1,5 +1,4 @@
 <?php
-require_once './db_connect.php';
 function file_upload($picture)
 {
     $result = new stdClass();
