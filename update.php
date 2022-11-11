@@ -1,5 +1,5 @@
 <?php
-require_once 'actions/db_connect.php';
+require_once './actions/db_connect.php';
 if ($_GET['id']) {
     $id = $_GET['id'];
     $sql = "SELECT * FROM library WHERE id = $id";

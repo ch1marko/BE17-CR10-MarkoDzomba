@@ -1,10 +1,10 @@
 <?php
-require_once 'db_connect.php';
-require_once 'file_upload.php';
+require_once './db_connect.php';
+require_once './file_upload.php';
 if ($_POST) {
     $title = $_POST['title'];
     $isbncode = $_POST['isbncode'];
-    $dis = $_POST['short_description'];
+    $shortdescription = $_POST['short_description'];
     $type = $_POST['type'];
     $author_first_name = $_POST['author_first_name'];
     $author_last_name = $_POST['author_last_name'];
@@ -46,7 +46,7 @@ if ($_POST) {
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Update</title>
+        <title>Create</title>
         <?php require_once '../components/boot.php'?>
     </head>
     <body>
@@ -55,8 +55,8 @@ if ($_POST) {
                 <h1>Create request response</h1>
             </div>
             <div class="alert alert-<?=$class;?>" role="alert">
-                <p><?php echo ($message) ?? ''; ?></p>
-                <p><?php echo ($uploadError) ?? ''; ?></p>
+                <p><?= $message; ?></p>
+                <p><?= $uploadError; ?></p>
                 <a href='../index.php'><button class="btn btn-primary" type='button'>Home</button></a>
             </div>
         </div>

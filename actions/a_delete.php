@@ -1,10 +1,10 @@
 <?php 
-require_once 'db_connect.php';
+require_once './db_connect.php';
 
 if ($_POST) {
    $id = $_POST['id'];
    $picture = $_POST['pic'];
-   ($picture =="picture.jpg")?: unlink("../pic/$picture");
+   ($picture =="picture.png")?: unlink("../pic/$picture");
 
    $sql = "DELETE FROM products WHERE id = {$id}";
    if (mysqli_query($connect, $sql) === TRUE) {

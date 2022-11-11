@@ -1,10 +1,10 @@
 <?php
-require_once 'db_connect.php';
-require_once 'file_upload.php';
+require_once './db_connect.php';
+require_once './file_upload.php';
 if ($_POST) {
     $title = $_POST['title'];
     $isbncode = $_POST['isbncode'];
-    $dis = $_POST['dis'];
+    $shortdescription = $_POST['dis'];
     $type = $_POST['type'];
     $author_first_name = $_POST['author_first_name'];
     $author_last_name = $_POST['author_last_name'];
@@ -20,8 +20,8 @@ if ($_POST) {
     $uploadError = '';
     $picture = file_upload($_FILES['pic']);
     if($picture->error===0){
-        ($_POST["pic"]=="picture.jpg")?: unlink("../pic/$_POST[pic]");
-        $sql = "UPDATE library SET `title` = '$title', `pic` = '$picture->fileName', `isbncode` = '$isbncode', `short_description` = '$dis', `type` = '$type', `author_first_name`= '$author_first_name' , `author_last_name` = '$author_last_name',`publisher_name` = '$publisher_name', `publisher_address` = '$publisher_address',`publish_date` = '$publish_date', `status`= '$status' WHERE id = {$id}";
+        ($_POST["pic"]=="picture.png")?: unlink("../pic/$_POST[pic]");
+        $sql = "UPDATE library SET `title` = '$title', `pic` = '$picture->fileName', `isbncode` = '$isbncode', `short_description` = '$shortdescription', `type` = '$type', `author_first_name`= '$author_first_name' , `author_last_name` = '$author_last_name',`publisher_name` = '$publisher_name', `publisher_address` = '$publisher_address',`publish_date` = '$publish_date', `status`= '$status' WHERE id = {$id}";
     }else{
         $sql = "UPDATE library SET `title` = '$title', `isbncode` = '$isbncode', `short_description` = '$shortdescription', `type` = '$type', `author_first_name`= '$author_first_name' , `author_last_name` = '$author_last_name',`publisher_name` = '$publisher_name', `publisher_address` = '$publisher_address',`publish_date` = '$publish_date', `status`= '$status'WHERE id  = {$id}";
     }
