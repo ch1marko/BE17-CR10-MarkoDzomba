@@ -10,7 +10,7 @@ if (mysqli_num_rows($result) > 0) {
         $tbody .= "
         <tbody>
         <tr>
-            <td class='text-center'><img class='img-thumbnail ' src='pictures/" . $row['pictures'] . "'</td>
+            <td class='text-center'><img class='img-thumbnail ' src='pic/" . $row['pic'] . "'</td>
             <td class='text-center'>" . $row['title'] . "</td>
             <td class='text-center'>" . $row['type'] . "</td>
             <td class='text-center'>" . $row['author_first_name'] . "</td>

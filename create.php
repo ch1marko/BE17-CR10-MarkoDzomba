@@ -72,7 +72,7 @@
                 </tr>
                 <tr>
                     <th>Picture</th>
-                    <td><input class='form-control' type="file" name="picture" /></td>
+                    <td><input class='form-control' type="file" name="pic" /></td>
                 </tr>
                 <tr>
                     <td><button class='btn btn-success' type="submit">Insert Product</button></td>

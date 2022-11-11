@@ -16,7 +16,7 @@ if ($_GET['id']) {
         $publisher_address = $data['publisher_address'];
         $publish_date = $data['publish_date'];
         $status = $data['status'];
-        $picture = $data['pictures'];
+        $picture = $data['pic'];
     } else {
         header("location: error.php");
     }
@@ -108,11 +108,11 @@ if ($_GET['id']) {
                 </tr>
                 <tr>
                     <th>Picture</th>
-                    <td><input class="form-control" type="file" name="pictures" /></td>
+                    <td><input class="form-control" type="file" name="pic" /></td>
                 </tr>
                 <tr>
                     <input type="hidden" name="id" value="<?php echo $data['id'] ?>" />
-                    <input type="hidden" name="pictures" value="<?php echo $data['pictures'] ?>" />
+                    <input type="hidden" name="pic" value="<?php echo $data['pic'] ?>" />
                     <td><button class="btn btn-success" type="submit">Save Changes</button></td>
                     <td><a href="index.php"><button class="btn btn-warning" type="button">Back</button></a></td>
                 </tr>
