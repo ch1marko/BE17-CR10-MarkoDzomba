@@ -18,7 +18,7 @@
 <body>
     <fieldset>
         <legend class='h2'>Add To Library</legend>
-        <form action="actions/a_create.php" method="post" enctype="multipart/form-data">
+        <form action="./actions/a_create.php" method="post" enctype="multipart/form-data">
             <table class='table'>
                 <tr>
                     <th>Title</th>
