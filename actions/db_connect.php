@@ -1,0 +1,17 @@
+<?php 
+
+$localhost = "localhost";
+$username = "root";
+$password = "";
+$dbname = "marko_library";
+
+// create connection
+$connect = mysqli_connect($localhost, $username, $password, $dbname);
+// check connection
+if (!$connect) {
+   die("Connection failed: " . mysqli_connect_error());
+}else {
+
+   // echo "Connected successfully";
+
+}
