@@ -8,7 +8,7 @@ if ($_GET['id']) {
         $data = mysqli_fetch_assoc($result);
         $title = $data['title'];
         $isbncode = $data['isbncode'];
-        $dis = $data['short_description'];
+        $shortdescription = $data['short_description'];
         $type = $data['type'];
         $author_first_name = $data['author_first_name'];
         $author_last_name = $data['author_last_name'];
@@ -48,7 +48,7 @@ if ($_GET['id']) {
 <body>
     <fieldset>
         <legend class='h2'>Update request <img class='img-thumbnail rounded-circle' src='pic/<?php echo $picture ?>'
-                alt="<?php echo $name ?>"></legend>
+                alt=""></legend>
         <form action="actions/a_update.php" method="post" enctype="multipart/form-data">
             <table class="table">
                 <tr>
@@ -57,7 +57,7 @@ if ($_GET['id']) {
                             value="<?php echo $title ?>" /></td>
                 </tr>
                 <tr>
-                    <th>ISBN code</th>
+                    <th>ISBN Code</th>
                     <td><input class="form-control" type="number" name="isbncode" step="any" placeholder="123"
                             value="<?php echo $isbncode ?>" /></td>
                 </tr>
