@@ -2,7 +2,7 @@
 require_once './actions/db_connect.php';
 
 
-$sql = "SELECT * FROM products";
+$sql = "SELECT * FROM library";
 $result = mysqli_query($connect, $sql);
 $tbody = ''; //this variable will hold the body for the table
 if (mysqli_num_rows($result) > 0) {
@@ -25,7 +25,7 @@ if (mysqli_num_rows($result) > 0) {
     ";
     }
 } else {
-    $tbody = "<tr><td colspan='5'><center>No Data Available </center></td></tr>";
+    $tbody = "<tr><td colspan='7'><center>No Data Available </center></td></tr>";
 }
 
 mysqli_close($connect);
@@ -62,14 +62,14 @@ mysqli_close($connect);
 </head>
 
 <body>
-    <div class="manageProduct w-75 mt-3">
+    <div class="manageProduct w-75 mt-4">
         <div class="container p-5">
             <div class='row'>
                 <div class='mb-3 col-auto mr-auto'>
-                    <a href="create.php"><button class='btn btn-info' type="button">Add to library</button></a>
+                    <a href="create.php"><button class='btn btn-success' type="button">Add to library</button></a>
                 </div>
                 <div class="dropdown col-auto">
-                    <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton1"
+                    <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton1"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         Sort
                     </button>
@@ -82,9 +82,9 @@ mysqli_close($connect);
                 </div>
             </div>
         </div>
-        <p class='h2'>library</p>
-        <table class='table table-hover shadow p-3 mb-5'>
-            <thead class='table-dark'>
+        <p class='h2 fw-bold mb-3'>Library</p>
+        <table class='table table-hover shadow-lg p-3 mb-5'>
+            <thead class='table-light'>
                 <tr>
                     <th scope="col">Picture</th>
                     <th scope="col">Title</th>
