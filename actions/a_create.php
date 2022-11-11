@@ -13,8 +13,8 @@ if ($_POST) {
     $publish_date = $_POST['publish_date'];
     $status = $_POST['status'];
     $uploadError = '';
-    $picture = file_upload($_FILES['pic']);
-    $sql = "INSERT INTO library(`title`, `isbncode`, `pic`, `short_description`, `type`, `author_first_name`, `author_last_name`, `publisher_name`, `publisher_address`, `publish_date`, `status`) VALUES ('$title', '$isbncode','$picture->fileName','$shortdescription', '$type', '$author_first_name', '$author_last_name', '$publisher_name', '$publisher_address', '$publish_date', '$status')";
+    $picture = file_upload($_FILES['pictures']);
+    $sql = "INSERT INTO library(`title`, `isbncode`, `pictures`, `short_description`, `type`, `author_first_name`, `author_last_name`, `publisher_name`, `publisher_address`, `publish_date`, `status`) VALUES ('$title', '$isbncode','$picture->fileName','$shortdescription', '$type', '$author_first_name', '$author_last_name', '$publisher_name', '$publisher_address', '$publish_date', '$status')";
     if (mysqli_query($connect, $sql) === true) {
         $class = "success";
         $message = "The entry below was successfully created <br>
