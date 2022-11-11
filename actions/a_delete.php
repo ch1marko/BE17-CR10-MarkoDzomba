@@ -3,7 +3,7 @@ require_once 'db_connect.php';
 
 if ($_POST) {
    $id = $_POST['id'];
-   $picture = $_POST['picture'];
+   $picture = $_POST['pictures'];
    ($picture =="product.png")?: unlink("../pictures/$picture");
 
    $sql = "DELETE FROM products WHERE id = {$id}";
