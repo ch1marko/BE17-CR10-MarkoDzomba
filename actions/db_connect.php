@@ -3,7 +3,7 @@
 $localhost = "localhost";
 $username = "root";
 $password = "";
-$dbname = "marko_library";
+$dbname = "BE17_CR4_MarkoDzomba_BigLibrary";
 
 // create connection
 $connect = mysqli_connect($localhost, $username, $password, $dbname);
