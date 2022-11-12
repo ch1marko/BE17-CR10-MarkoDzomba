@@ -66,10 +66,10 @@ mysqli_close($connect);
         <div class="container p-5">
             <div class='row'>
                 <div class='mb-3 col-auto mr-auto'>
-                    <a href="create.php"><button class='btn btn-success' type="button">Add to library</button></a>
+                    <a href="create.php"><button class='btn btn-success btn-outline-secondary text-light' type="button">Add to library</button></a>
                 </div>
                 <div class="dropdown col-auto">
-                    <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton1"
+                    <button class="btn btn-success btn-outline-secondary text-light dropdown-toggle" type="button" id="dropdownMenuButton1"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         Sort
                     </button>
