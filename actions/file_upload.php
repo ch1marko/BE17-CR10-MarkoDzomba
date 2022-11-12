@@ -1,11 +1,10 @@
 <?php
-function file_upload($picture)
-{
+function file_upload($picture){
     $result = new stdClass();
     $result->fileName = 'picture.png';
     $result->error = 1;
-
     $fileName = $picture["name"];
+    $fileType = $picture["type"];
     $fileTmpName = $picture["tmp_name"];
     $fileError = $picture["error"];
     $fileSize = $picture["size"];

@@ -1,6 +1,6 @@
 <?php 
 
-$localhost = "localhost";
+$localhost = "127.0.0.1";
 $username = "root";
 $password = "";
 $dbname = "marko_library";
@@ -10,7 +10,7 @@ $connect = mysqli_connect($localhost, $username, $password, $dbname);
 // check connection
 if (!$connect) {
    die("Connection failed: " . mysqli_connect_error());
-}else {
+//}else {
 
    // echo "Connected successfully";
 
