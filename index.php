@@ -10,7 +10,7 @@ if (mysqli_num_rows($result) > 0) {
         $tbody .= "
         <tbody>
         <tr>
-            <td class='text-center'><img class='img-thumbnail ' src='pic/" . $row['pic'] . "'</td>
+            <td class='text-center'><img class='img-thumbnail' src='pic/" . $row['pic'] . "'</td>
             <td class='text-center'>" . $row['title'] . "</td>
             <td class='text-center'>" . $row['type'] . "</td>
             <td class='text-center'>" . $row['author_first_name'] . "</td>
@@ -45,8 +45,9 @@ mysqli_close($connect);
         }
 
         .img-thumbnail {
-            width: 70px !important;
-            height: 70px !important;
+            width: 160px !important;
+            height: 110px !important;
+            object-fit: cover;
         }
 
         td {
