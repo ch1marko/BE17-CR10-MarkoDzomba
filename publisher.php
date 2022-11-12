@@ -5,7 +5,7 @@ error_reporting(E_ALL);
 
 require_once './actions/db_connect.php';
 $pub = $_GET["publisher_name"];
-$sql = "SELECT * FROM Library WHERE publisher_name = '$pub'"; 
+$sql = "SELECT * FROM library WHERE publisher_name = '$pub'"; 
 $result = mysqli_query($connect, $sql);
 
 $tbody="";
