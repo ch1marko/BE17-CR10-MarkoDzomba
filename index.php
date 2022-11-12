@@ -16,8 +16,8 @@ if (mysqli_num_rows($result) > 0) {
             <td class='text-center'>" . $row['author_first_name'] . "</td>
             <td class='text-center'>" . $row['publisher_name'] . "</td>
             <td class='text-center'>" . $row['status'] . "</td>
-            <td class='text-center'><a href='update.php?id=" . $row['id'] . "'><button class='btn btn-primary btn-sm' type='button'>Update</button></a>
-            <a href='details.php?id=" . $row['id'] . "'><button class='btn btn-warning btn-sm' type='button'>Details</button></a>
+            <td class='text-center'><a href='update.php?id=" . $row['id'] . "'><button class='btn btn-dark btn-sm mb-2' type='button'>Update</button></a>
+            <a href='details.php?id=" . $row['id'] . "'><button class='btn btn-light btn-outline-dark btn-sm mb-2' type='button'>Details</button></a>
             <a href='delete.php?id=" . $row['id'] . "'><button class='btn btn-danger btn-sm' type='button'>Delete</button></a>
             </td>
         </tr>
