@@ -1,13 +1,16 @@
 <?php
 require_once 'db_connect.php';
 require_once 'file_upload.php';
+ini_set('display_errors', 1); 
+ini_set('display_startup_errors', 1); 
+error_reporting(E_ALL);
 
 
 if ($_POST) {
     $title = $_POST['title'];
     $isbncode = $_POST['isbncode'];
     $shortdescription = $_POST['short_description'];
-    $type = $_POST['type'];
+    $type= $_POST['type'];
     $author_first_name = $_POST['author_first_name'];
     $author_last_name = $_POST['author_last_name'];
     $publisher_name = $_POST['publisher_name'];
@@ -15,8 +18,14 @@ if ($_POST) {
     $publish_date = $_POST['publish_date'];
     $status = $_POST['status'];
     $uploadError = '';
+
     $picture = file_upload($_FILES['pic']);
-    $sql = "INSERT INTO library(`title`, `isbncode`, `pic`, `short_description`, `type`, `author_first_name`, `author_last_name`, `publisher_name`, `publisher_address`, `publish_date`, `status`) VALUES ('$title', '$isbncode','$picture->fileName','$shortdescription', '$type', '$author_first_name', '$author_last_name', '$publisher_name', '$publisher_address', '$publish_date', '$status')";
+    
+    $sql = "INSERT INTO library (`title`, `isbncode`, `pic`, `short_description`, `type`, `author_first_name`, `author_last_name`, `publisher_name`, `publisher_address`, `publish_date`, `status`) VALUES ('$title', '$isbncode','$picture->fileName','$shortdescription', '$type', '$author_first_name', '$author_last_name', '$publisher_name', '$publisher_address', '$publish_date', '$status')";
+
+
+    //$sql = "INSERT INTO library (title, isbncode, pic, short_description, type, author_first_name, author_last_name, publisher_name, publisher_address, publish_date, status ) VALUES ('$title', $isbncode,'$picture->fileName','$shortdescription', '$type', '$author_first_name', '$author_last_name', '$publisher_name', '$publisher_address', $publish_date, '$status')";
+    
     if (mysqli_query($connect, $sql) === true) {
         $class = "success";
         $message = "The entry below was successfully created <br>
